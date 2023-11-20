@@ -3,16 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Biglietto del treno</title>
 </head>
 <body>
-    
-    <input type="text" id="username" placeholder="Inserisci nome e cognome">
-    <input type="number" id="kilometers" placeholder="Inserisci il numero di chilometri">
-    <input type="text" id="age" placeholder="Inserisci la tua età">
-    <button id="send">INVIA</button>
+    <section id="form-section">
+        <div class="general-container">
+            <h1>Acquista qui il tuo biglietto ecosostenibile</h1>
+            <input type="text" id="username" class="not" placeholder="Inserisci nome e cognome">
+            <input type="number" id="kilometers" class="not" placeholder="Inserisci il numero di chilometri">
+            <input type="text" id="age" class="not" placeholder="Inserisci la tua età">
+            <button id="send">INVIA</button>
+            <button id="delete">ANNULLA</button>
+            <div class="discount">
+                <h3>Sconti disponibili:</h3>
+                <ul>
+                    <li>Anni 0-17: -20%;</li>
+                    <li>Anni over 65: -40%.</li>
+                </ul>    
+            </div>
+            
 
-    <h2 id="biglietto"></h2>
+            <div class="container">
+                <h2 id="biglietto"></h2>
+            </div>
+        </div>
+    </section>
+   
 
     <script src="js/script.js"></script>
 </body>
