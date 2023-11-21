@@ -6,7 +6,7 @@
 
 #form-section{
     background-color: rgb(25, 124, 73);
-    height: 100vw;
+    min-height: 745px;
     padding: 50px 0;
 }
 
@@ -26,11 +26,30 @@ h1{
     text-align: center;
 }
 
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col{
+    flex-basis: calc(85% / 3);
+}
+
+.col.buttons{
+    flex-basis: 15%;
+}
+
+.title{
+    font-size: 20px;
+    padding-bottom: 0;
+}
+
 input{
     padding: 5px;
     border-radius: 10px;
     border: 1px solid rgb(6, 58, 6);
     margin: 10px;
+    text-align: center;
 }
 
 button{
@@ -51,18 +70,42 @@ h2{
 
 .discount{
     text-align: left;
-    padding-top: 30px;
-    color: rgb(20, 170, 92);
-    margin-left: 130px;
-}
-
-.discount li{
-    margin-left: 12px;
+    padding: 30px 0;
     color: white;
-    padding: 5px 0;
+    font-size: 12px;
 }
 
 
 .none{
     display: none;
+}
+
+.biglietto{
+    font-size: 30px;
+}
+
+.col.ticket.large{
+    flex-basis: 30%;
+    background-color: lightgray;
+}
+
+.col.ticket{
+    flex-basis: calc(70% / 4);
+    background-color: white;
+    margin-bottom: 50px;
+}
+
+h5{
+    padding: 20px 0;
+    font-size: 20px;
+}
+
+h4{
+    padding: 20px 0;
+    font-size: 15px;
+}
+
+.name, .km, .carrozza, .posto, .costo{
+    font-size: 20px;
+    padding-bottom: 20px;
 }

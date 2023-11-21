@@ -22,6 +22,9 @@ let userAge;
 let ticketPrice;
 let userTicket;
 
+// selezione del container che appare e scompare con il click sui bottoni
+const container = document.querySelector(".container");
+
 sendButton.addEventListener("click",
 
     function(){
@@ -46,19 +49,31 @@ sendButton.addEventListener("click",
         } else{
             userTicket = ticketPrice;
         }
+        
+        
+        
+        container.classList.remove("none");
 
         // output
-        document.getElementById("biglietto").innerHTML = `Il costo del tuo biglietto è di: ${userTicket.toFixed(2)} €`;
+        document.querySelector(".name").innerHTML = userName;
+        document.querySelector(".km").innerHTML = nbKilometers;
+        document.querySelector(".costo").innerHTML = userTicket.toFixed(2) + "€";
+        document.querySelector(".carrozza").innerHTML = (Math.random() * 50).toFixed(0);
+        document.querySelector(".posto").innerHTML = (Math.random() * 70).toFixed(0);
+
     }
 
 );
 
-const container = document.querySelector(".container");
+// cancellare tutto quando premo annulla
 
 deleteButton.addEventListener("click", 
 
     function () {
         container.classList.add("none");
+        inputName.value = "";
+        inputKm.value = "";
+        inputAge.value = "";
     }
 
 )

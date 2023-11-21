@@ -10,22 +10,54 @@
     <section id="form-section">
         <div class="general-container">
             <h1>Acquista qui il tuo biglietto ecosostenibile</h1>
-            <input type="text" id="username" class="not" placeholder="Inserisci nome e cognome">
-            <input type="number" id="kilometers" class="not" placeholder="Inserisci il numero di chilometri">
-            <input type="text" id="age" class="not" placeholder="Inserisci la tua età">
-            <button id="send">INVIA</button>
-            <button id="delete">ANNULLA</button>
-            <div class="discount">
-                <h3>Sconti disponibili:</h3>
-                <ul>
-                    <li>Anni 0-17: -20%;</li>
-                    <li>Anni over 65: -40%.</li>
-                </ul>    
+            <div class="row">
+                <div class="col">
+                    <h2 class="title">Nome e Cognome</h2>
+                    <input type="text" id="username" class="not" placeholder="Inserisci nome e cognome">
+                </div>
+                <div class="col">
+                    <h2 class="title">Numero di chilometri</h2>
+                    <input type="number" id="kilometers" class="not" placeholder="Inserisci il numero di chilometri">
+                </div>
+                <div class="col">
+                    <h2 class="title">Età</h2>
+                    <input type="text" id="age" class="not" placeholder="Inserisci la tua età">
+                </div>
+                <div class="col buttons">
+                    <button id="send">CREA</button>
+                    <button id="delete">ANNULLA</button>
+                </div>
             </div>
-            
 
-            <div class="container">
-                <h2 id="biglietto"></h2>
+            <div class="discount">*Sconti disponibili per passeggeri minorenni (-20%) e passeggeri over 65 (-40%).</div>
+            
+            
+            <!-- biglietto che appare e scompare -->
+            <div class="container none">
+                <h2 class="biglietto">ECCO IL TUO BIGLIETTO</h2>
+                <div class="row">
+                    <div class="col ticket large">
+                        <h5>INTESTATARIO BIGLIETTO</h5>
+                        <div class="name"></div>
+                    </div>
+                    <div class="col ticket">
+                        <h4>Numero di chilometri</h4>
+                        <div class="km"></div>
+                    </div>
+                    <div class="col ticket">
+                        <h4>Carrozza</h4>
+                        <div class="carrozza"></div>
+                    </div>
+                    <div class="col ticket">
+                        <h4>N° posto</h4>
+                        <div class="posto"></div>
+                    </div>
+                    <div class="col ticket">
+                        <h4>Costo Finale</h4>
+                        <div class="costo"></div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
